@@ -1,0 +1,70 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Contenedor principal de las tarjetas */
+#contenedor {
+    width: 100%;
+    max-width: 450px;
+    margin: 40px auto;
+}
+
+/* Diseño de la tarjeta */
+.tarjeta-contenido {
+    height: 200px;
+    padding: 20px;
+    margin-top: 15px;
+    background-color: #f3f3f3;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Espacio donde aparecen los botones */
+.controles {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+/* Estilo general de los botones */
+button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Barra que muestra el progreso */
+.progreso-contenedor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+/* Fondo de la barra */
+.progreso-fondo {
+    flex: 1;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 6px;
+}
+
+/* Parte que se llena segun la tarjeta actual */
+.progreso-actual {
+    height: 100%;
+    background-color: #bbb;
+    border-radius: 6px;
+    transition: width 0.3s;
+}

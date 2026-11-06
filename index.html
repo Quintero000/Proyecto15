@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Proyecto 15 - Tarjetas JPQ</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+    <!-- Aqui se muestra toda la aplicacion de Vue -->
+    <div id="contenedor">
+
+        <h1>Mis Flash Cards</h1>
+
+        <!-- Componente que muestra el avance -->
+        <progreso
+            :indice="indice"
+            :total="tarjetas.length">
+        </progreso>
+
+        <!-- Muestra la pregunta o la respuesta -->
+        <mi-tarjeta
+            :texto="mostrarRespuesta ? tarjetas[indice].respuesta : tarjetas[indice].pregunta">
+        </mi-tarjeta>
+
+        <!-- Botones para controlar las tarjetas -->
+        <controles
+            :mostrar-respuesta="mostrarRespuesta"
+            @anterior="anterior"
+            @voltear="voltear"
+            @siguiente="siguiente">
+        </controles>
+
+    </div>
+
+    <!-- Primero se carga Vue y despues el archivo JavaScript -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="JS/script.js"></script>
+
+</body>
+</html>
